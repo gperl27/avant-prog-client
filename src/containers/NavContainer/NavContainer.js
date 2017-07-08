@@ -6,6 +6,10 @@ import Toolbar from 'material-ui/Toolbar';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
+import Typography from 'material-ui/Typography';
+import Radium from 'radium';
+
+import styles from './NavContainerStyles';
 
 class NavContainer extends Component {
   constructor(props) {
@@ -16,14 +20,16 @@ class NavContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div style={styles.base}>
         <AppBar position="static">
           <Toolbar>
             <IconButton color="contrast" aria-label="Menu">
               <MenuIcon />
             </IconButton>
+            <Typography type="title" color="inherit" style={styles.flex}>
               Avant Prog
-             <Button color="contrast">Login</Button>
+            </Typography>
+            <Button color="contrast">Login</Button>
           </Toolbar>
         </AppBar>
       </div>
@@ -31,8 +37,8 @@ class NavContainer extends Component {
   }
 }
 
-export default NavContainer;
+export default Radium(NavContainer);
 
 NavContainer.PropTypes = {
-  NavContainer: PropTypes.obj,
+  styles: PropTypes.obj,
 };
