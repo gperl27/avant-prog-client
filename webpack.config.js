@@ -12,7 +12,7 @@ module.exports = {
   ],
   output: {
     path: __dirname,
-    publicPath: '/dist',
+    publicPath: '/',
     filename: 'index_bundle.js',
   },
   module: {

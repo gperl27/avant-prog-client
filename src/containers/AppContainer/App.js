@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        Hello World
-      </div>
-    );
-  }
-}
+import NavContainer from '../NavContainer/NavContainer';
+
+const App = () =>
+  (
+    <div>
+      <NavContainer />
+    </div>
+  );
+
+export default App;

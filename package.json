@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "webpack-dev-server --port 3000 --devtool eval --progress --colors --hot --content-base dist",
     "test": "react-scripts test --env=jsdom",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run clean && npm install && npm run build"
   },
   "keywords": [
     "react",
@@ -30,7 +33,6 @@
     "eslint-plugin-react": "^7.1.0",
     "expect": "^1.20.2",
     "react-addons-test-utils": "^15.6.0",
-    "react-dom": "^15.6.1",
     "react-scripts": "^1.0.10",
     "webpack": "^3.1.0",
     "webpack-dev-server": "^2.5.1"
@@ -38,12 +40,16 @@
   "dependencies": {
     "axios": "^0.16.2",
     "lodash": "^4.17.4",
+    "material-ui": "^1.0.0-alpha.21",
+    "material-ui-icons": "^1.0.0-alpha.19",
+    "prop-types": "^15.5.10",
     "radium": "^0.19.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
+    "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.7.1",
     "redux-form": "^6.8.0",
     "redux-thunk": "^2.2.0"
