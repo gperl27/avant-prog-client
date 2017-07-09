@@ -11,12 +11,14 @@ import Radium from 'radium';
 
 import styles from './AppBarStyles';
 
-const NavAppBar = ({ title, buttonText }) =>
+const NavAppBar = ({ title, buttonText, clickIcon }) =>
   (
     <AppBar position="static">
       <Toolbar>
         <IconButton color="contrast" aria-label="Menu">
-          <MenuIcon />
+          <MenuIcon
+            onClick={clickIcon}
+          />
         </IconButton>
         <Typography type="title" color="inherit" style={styles.flex}>
           {title}
@@ -29,6 +31,7 @@ const NavAppBar = ({ title, buttonText }) =>
 export default Radium(NavAppBar);
 
 NavAppBar.propTypes = {
+  clickIcon: PropTypes.func,
   title: PropTypes.string.isRequired,
-  buttonText: PropTypes.bool.isRequired,
+  buttonText: PropTypes.string.isRequired,
 };

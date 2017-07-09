@@ -11,12 +11,17 @@ import styles from './NavContainerStyles';
 
 class NavContainer extends Component {
   render() {
-    console.log(this.props, 'NAV CONTAINER');
+    const { sidebarIsShowing, showNav, hideNav } = this.props;
 
     return (
       <div style={styles.base}>
-        <Drawer />
+        <Drawer
+          open={sidebarIsShowing}
+          showNav={() => showNav()}
+          hideNav={() => hideNav()}
+        />
         <AppBar
+          clickIcon={() => showNav()}
           title="Avant Prog"
           buttonText="Login"
         />
