@@ -15,10 +15,8 @@ const NavAppBar = ({ title, buttonText, clickIcon }) =>
   (
     <AppBar position="static">
       <Toolbar>
-        <IconButton color="contrast" aria-label="Menu">
-          <MenuIcon
-            onClick={clickIcon}
-          />
+        <IconButton onClick={clickIcon} color="contrast" aria-label="Menu">
+          <MenuIcon />
         </IconButton>
         <Typography type="title" color="inherit" style={styles.flex}>
           {title}

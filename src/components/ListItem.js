@@ -3,16 +3,12 @@ import PropTypes from 'prop-types';
 
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 
-const AppListItem = ({ title }) => {
+const AppListItem = (props) => {
   return (
     <ListItem button>
-      <ListItemText primary={title} />
+      {props.chidlren}
     </ListItem>
   );
 };
 
 export { AppListItem as ListItem };
-
-AppListItem.propTypes = {
-  title: PropTypes.string.isRequired,
-};
