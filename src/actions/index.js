@@ -13,3 +13,5 @@
   2. In this file, export * from '/userActions'
 
  */
+
+export * from './interfaceActions';

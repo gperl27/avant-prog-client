@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 
@@ -9,6 +11,8 @@ import styles from './NavContainerStyles';
 
 class NavContainer extends Component {
   render() {
+    console.log(this.props, 'NAV CONTAINER');
+
     return (
       <div style={styles.base}>
         <Drawer />
@@ -21,8 +25,8 @@ class NavContainer extends Component {
   }
 }
 
-export default Radium(NavContainer);
+const mapStateToProps = state => ({
+  sidebarIsShowing: state.interface.sidebarIsShowing,
+});
 
-NavContainer.PropTypes = {
-  styles: PropTypes.obj,
-};
+export default connect(mapStateToProps, actions)(Radium(NavContainer));
