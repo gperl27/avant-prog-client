@@ -2,7 +2,7 @@ import React from 'react';
 
 import AlbumCardList from './components/AlbumCardList';
 
-const AlbumsContainer = props => {
+const AlbumsContainer = (props) => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   return (

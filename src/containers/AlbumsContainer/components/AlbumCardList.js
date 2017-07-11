@@ -16,7 +16,7 @@ const AlbumCardList = (props) => {
   return (
     <div>
       <h3>{props.title}</h3>
-      <Grid container justify="center" gutter={16}>
+      <Grid container justify="center" gutter={24}>
         {renderGrids(props.albums)}
       </Grid>
     </div>
@@ -24,7 +24,7 @@ const AlbumCardList = (props) => {
 };
 
 AlbumCardList.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   albums: PropTypes.object.isRequired,
 };
 
