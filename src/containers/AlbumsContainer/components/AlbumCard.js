@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Grid from 'material-ui/Grid';
 import Card, { CardActions, CardHeader, CardMedia, CardContent } from 'material-ui/Card';
 import Avatar from 'material-ui/Avatar';
 import FavoriteBorderIcon from 'material-ui-icons/FavoriteBorder';
 import CommentIcon from 'material-ui-icons/Comment';
 import BottomNavigation, { BottomNavigationButton } from 'material-ui/BottomNavigation';
-
+import IconButton from 'material-ui/IconButton';
 
 const tempImgSrc = 'https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Dsotm30.jpg/220px-Dsotm30.jpg';
 
@@ -27,6 +28,12 @@ const styles = {
 const AlbumCard = (props) => {
   const avatar = <Avatar>32</Avatar>;
 
+  const CommentBtn = (
+    <Link to={`album/${props.album}`}>
+      <CommentIcon />
+    </Link>
+  );
+
   return (
     <Grid item>
       <Card style={styles.card}>
@@ -42,7 +49,7 @@ const AlbumCard = (props) => {
           <CardActions>
             <BottomNavigation showLabels>
               <BottomNavigationButton label="Like" icon={<FavoriteBorderIcon />} />
-              <BottomNavigationButton label="Discuss" icon={<CommentIcon />} />
+              <BottomNavigationButton label="Discuss" icon={CommentBtn} />
             </BottomNavigation>
           </CardActions>
         </CardContent>

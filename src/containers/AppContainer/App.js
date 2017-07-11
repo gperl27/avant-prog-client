@@ -7,6 +7,7 @@ import Grid from 'material-ui/Grid';
 
 import MainPageContainer from '../MainPageContainer/MainPageContainer';
 import AlbumsContainer from '../AlbumsContainer/AlbumsContainer';
+import ShowAlbumContainer from '../ShowAlbumContainer/ShowAlbumContainer';
 import ArtistsContainer from '../ArtistsContainer/ArtistsContainer';
 
 import NavContainer from '../NavContainer/NavContainer';
@@ -27,6 +28,7 @@ const App = (props) => {
         <Grid item xs={8}>
           <Route exact path="/" component={MainPageContainer} />
           <Route path="/albums" component={AlbumsContainer} />
+          <Route path="/album/:id" component={ShowAlbumContainer} />
           <Route path="/artists" component={ArtistsContainer} />
         </Grid>
       </Grid>
