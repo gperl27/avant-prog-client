@@ -29,6 +29,7 @@ const App = (props) => {
           <Route exact path="/" component={MainPageContainer} />
           <Route path="/albums" component={AlbumsContainer} />
           <Route path="/album/:id" component={ShowAlbumContainer} />
+          <Route path="/album" component={ShowAlbumContainer} />
           <Route path="/artists" component={ArtistsContainer} />
         </Grid>
       </Grid>
